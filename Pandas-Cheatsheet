@@ -1,0 +1,109 @@
+```markdown
+# Pandas Cheatsheet
+
+## Creating DataFrames
+
+### From Dictionary
+```python
+import pandas as pd
+
+data = {'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35]}
+
+df = pd.DataFrame(data)
+print(df)
+```
+
+### From List of Lists
+```python
+import pandas as pd
+
+data = [['Alice', 25], ['Bob', 30], ['Charlie', 35]]
+
+df = pd.DataFrame(data, columns=['Name', 'Age'])
+print(df)
+```
+
+## Reading Data
+
+### From CSV File
+```python
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+print(df.head())
+```
+
+## Basic Operations
+
+### Selecting Columns
+```python
+column = df['Column_Name']
+print(column)
+```
+
+### Filtering Rows
+```python
+filtered_df = df[df['Column_Name'] > 50]
+print(filtered_df)
+```
+
+### Adding Columns
+```python
+df['New_Column'] = [1, 2, 3]
+print(df)
+```
+
+### Dropping Columns
+```python
+df.drop(columns=['Column_Name'], inplace=True)
+print(df)
+```
+
+## Data Manipulation
+
+### Group By
+```python
+grouped_df = df.groupby('Column_Name').mean()
+print(grouped_df)
+```
+
+### Sorting
+```python
+sorted_df = df.sort_values(by='Column_Name')
+print(sorted_df)
+```
+
+### Merge
+```python
+merged_df = pd.merge(df1, df2, on='Column_Name')
+print(merged_df)
+```
+
+## Data Cleaning
+
+### Handling Missing Values
+```python
+cleaned_df = df.dropna()
+print(cleaned_df)
+```
+
+### Filling Missing Values
+```python
+filled_df = df.fillna(0)
+print(filled_df)
+```
+
+## Exporting Data
+
+### To CSV File
+```python
+df.to_csv('output.csv', index=False)
+```
+
+### To Excel File
+```python
+df.to_excel('output.xlsx', index=False)
+```
+
+```
