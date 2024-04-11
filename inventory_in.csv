@@ -1,0 +1,7 @@
+Product Code,Product Name,Date,Warehouse,Quantity
+P001,Product A,2024-01-01,W1,100
+P002,Product B,2024-01-01,W1,150
+P003,Product C,2024-01-01,W2,200
+P001,Product A,2024-02-01,W1,120
+P002,Product B,2024-02-01,W1,180
+P003,Product C,2024-02-01,W2,220
